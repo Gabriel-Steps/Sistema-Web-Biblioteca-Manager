@@ -1,0 +1,72 @@
+.sobreMimContainer{
+    width: 100%;
+    background-color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100vh;
+
+    h1{
+        color: #FFFFFF;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .imagemDePerfil{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            width: 70%;
+            height: 90%;
+        }
+    }
+}
+
+.infoSobreMim{
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+    overflow-y: auto;
+
+    p{
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    ul{
+        margin-top: 10px;
+        margin-left: 20px;
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width: 900px) {
+    .sobreMimContainer {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: auto;
+    }
+
+    .imagemDePerfil{
+        width: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .infoSobreMim{
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+    }
+}

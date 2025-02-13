@@ -1,0 +1,25 @@
+.dashboardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+
+    h1{
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+        font-size: 35px;
+        color: #2C3E50;
+    }
+}
+
+.cardsContainer{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}

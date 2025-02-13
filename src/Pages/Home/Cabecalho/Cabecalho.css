@@ -1,0 +1,49 @@
+.cabecalhoContainer{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    margin-bottom: 30px;
+
+    .tituloCabecalhoContainer{
+        width: 20%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .tituloCabecalhoContainer h1{
+        color: #2C3E50;
+    }
+    .tituloCabecalhoContainer p {
+        color: #3498DB;
+    }
+
+    .menuCabecalhoContainer{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+        height: 100%;
+
+        a{
+            text-decoration: none;
+            color: #2C3E50;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 25px 50px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.1rem;
+            transition: 0.5s;
+        }
+
+        a:hover{
+            border-left: 1px solid #00000018;
+            border-right: 1px solid #00000018;
+            border-bottom: 1px solid #00000018;
+            color: rgba(77, 87, 97, 0.863);
+            transition: 0.5s;
+        }
+    }
+}
