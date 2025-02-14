@@ -1,0 +1,44 @@
+.cardLivroListaContainer{
+    background-color: #d3d3d3;
+    padding: 20px;
+    border-radius: 20px;
+
+    *{
+        margin-bottom: 20px;
+    }
+
+    h2 b{
+        font-size: 18px;
+    }
+
+    button{
+        padding: 15px 20px;
+        margin: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 20px;
+        border: none;
+        color: #FFFFFF;
+    }
+
+    button[status="deletar"]{
+        background-color: #ff2f2f;
+        transition: 0.5s;
+    }
+
+    button[status="deletar"]:hover{
+        background-color: #ff3b3b;
+        box-shadow: 1px 1px 10px #ff6c6c;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    button[status="indisponivel"]{
+        background-color: #929292;
+    }
+
+    button[status="indisponivel"]:hover{
+        cursor: not-allowed;
+    }
+}

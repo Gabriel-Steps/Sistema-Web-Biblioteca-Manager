@@ -1,0 +1,81 @@
+.formCriarLivroContainer{
+    width: 100%;
+    padding: 5px;
+
+    button{
+        padding: 10px;
+        background-color: #00FF00;
+        font-weight: bold;
+        margin-top: 20px;
+        font-size: 25px;
+        color: #FFFFFF;
+        border-radius: 10px;
+        border: none;
+        transition: 0.5s;
+    }
+
+    button:hover{
+        cursor: pointer;
+        background-color: #20ff20;
+        box-shadow: 1px 1px 10px #41ff41;
+        transition: 0.5s;
+    }
+}
+
+.formCriarLivroContainer form[status="hide"]{
+    display: none;
+}
+.formCriarLivroContainer form[status="flex"]{
+    display: flex;
+}
+
+.formCriarLivroContainer form{
+    margin-top: 25px;
+    width: 40%;
+    background-color: #5959f780;
+    border: 1px solid #5959f7;
+    display: flex;
+    border-radius: 20px;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+
+    h1{
+        color: #FFFFFF;
+        letter-spacing: 0.1rem;
+    }
+    label{
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    *{
+        margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="number"]{
+        width: 80%;
+        border-radius: 5px;
+        padding: 10px;
+        border: none;
+        font-size: 14px;
+    }
+
+    input[type="submit"]{
+        background-color: #00FF00;
+        color: #FFFFFF;
+        padding: 5px;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .formCriarLivroContainer form{
+        width: 90%;
+    }
+}

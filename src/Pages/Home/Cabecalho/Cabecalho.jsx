@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Cabecalho.css';
 
 export default function Cabecalho() {
@@ -8,8 +9,8 @@ export default function Cabecalho() {
           <h1>Biblioteca <p>Manager</p></h1>
           </div>
           <div className='menuCabecalhoContainer'>
-              <a href="#">Home</a>
-              <a href="#">Livros</a>
+              <Link to="/">Home</Link>
+              <Link to="/paginaLivros" >Livros</Link>
               <a href="#">Empréstimos</a>
               <a href="#">Usuários</a>
         </div>

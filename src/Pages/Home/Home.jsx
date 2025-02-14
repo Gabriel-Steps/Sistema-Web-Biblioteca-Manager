@@ -10,7 +10,6 @@ import Rodape from './Rodape/Rodape';
 export default function Home() {
   return (
     <div className='AppContainer'>
-      <Cabecalho />
       <Carrossel />
       <Dashboards />
       <SobreMim />

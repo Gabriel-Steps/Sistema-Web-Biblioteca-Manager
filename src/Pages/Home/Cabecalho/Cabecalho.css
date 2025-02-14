@@ -24,7 +24,7 @@
         width: 80%;
         height: 100%;
 
-        a{
+        a, Link{
             text-decoration: none;
             color: #2C3E50;
             font-weight: bold;
@@ -38,7 +38,7 @@
             transition: 0.5s;
         }
 
-        a:hover{
+        a:hover, Link:hover{
             border-left: 1px solid #00000018;
             border-right: 1px solid #00000018;
             border-bottom: 1px solid #00000018;
