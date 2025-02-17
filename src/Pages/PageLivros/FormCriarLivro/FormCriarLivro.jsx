@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './FormCriarLivro.css';
 import { createLivro } from '../../../services/livros';
+import imagemXModal from '../../../Assets/iconXModal.png';
 
 
 export default function FormCriarLivro() {
@@ -17,7 +18,8 @@ export default function FormCriarLivro() {
         anoDeLancamento: parseInt(anoDeLancamento, 10) || 0 
     };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const mensagem = await createLivro(livro);
         alert(mensagem);
         window.location.reload();
@@ -26,8 +28,12 @@ export default function FormCriarLivro() {
     return (
         <div className='formCriarLivroContainer'>
             <button onClick={() => setEstadoFormulario(estadoFormulario === "hide" ? "flex" : "hide")}>Adicionar Livro</button>
-            <form status={estadoFormulario} method="post" onSubmit={handleSubmit}>
-                <h1>Adicionar Livro</h1>
+            <div status={estadoFormulario} className="foraFormContainer">
+                <form method="post" onSubmit={handleSubmit}>
+                    <div className="cabecalhoModal">
+                        <h1>Adicionar Livro</h1>
+                        <img src={imagemXModal} style={{ width: "40px", height: "auto"}} alt="" onClick={() => setEstadoFormulario(estadoFormulario === "flex" ? "hide" : "flex")}/>
+                    </div>
                 <label>Titulo:</label>
                 <input type="text" name='titulo' onChange={(e) => setTitulo(e.target.value)} required />
 
@@ -42,6 +48,7 @@ export default function FormCriarLivro() {
 
                 <input type="submit" value={"Enviar"} />
             </form>
+            </div>
         </div>
     );
 }

@@ -4,8 +4,9 @@ import Card from './Card/Card';
 import livroImg from '../../../Assets/livroHome.png'
 import usuarioImg from '../../../Assets/userHome.png'
 import emprestimoImg from '../../../Assets/emprestimoHome.png'
-import { getAllEmprestimos, getAllUsuarios } from '../../../services/api';
+import { getAllEmprestimos } from '../../../services/emprestimos';
 import { getAllLivros } from '../../../services/livros';
+import { getAllUsuarios } from '../../../services/usuarios';
 
 export default function Dashboards() {
   const [livros, setLivros] = useState([]);

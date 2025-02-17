@@ -3,34 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    table{
-        width: 100%;
-
-        thead tr th{
-            font-size: 23px;
-            font-weight: 250;
-            border-bottom: 1px solid #00000060;
-        }
-    }
-}
-
-.cardsLivrosContainer{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    display: none;
-}
-
-@media (max-width: 900px) {
-    .listaLivrosContainer table{
-        display: none;
-    }
-
-    .cardsLivrosContainer{
-        display: flex;
-    }
 }
