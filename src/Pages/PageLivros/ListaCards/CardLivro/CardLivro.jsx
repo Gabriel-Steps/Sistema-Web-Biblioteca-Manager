@@ -5,7 +5,7 @@ import { deleteLivro } from '../../../../services/livros'
 
 export default function CardLivro(props) {
   return (
-    <div className='cardLivroListaContainer'>
+    <div className='cardListaContainer'>
           <h2>{ props.titulo }</h2>
           <hr />
           <h2>Autor: <b>{ props.autor }</b></h2>

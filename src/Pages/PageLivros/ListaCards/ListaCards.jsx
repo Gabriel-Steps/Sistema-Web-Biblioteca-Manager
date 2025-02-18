@@ -1,32 +1,31 @@
 import React, { useEffect, useState } from 'react'
-import './ListaLivros.css';
+import './ListaCards.css';
 import { getAllLivros } from '../../../services/livros';
 import { getAllUsuarios } from '../../../services/usuarios';
 import { getAllEmprestimos } from '../../../services/emprestimos';
 import CardLivro from './CardLivro/CardLivro';
+import Cardusuario from './CardUsuario/Cardusuario';
 
-export default function ListaLivros({tipoSessao}) {
-    // const [livros, setLivros] = useState([]);
-    // const [usuarios, setUsuarios] = useState([]);
-    // const [emprestimos, setEmprestimos] = useState([]);
-    // var dados = [];
+export default function ListaCards({tipoSessao}) {
     const [dadosBd, setDadosBd] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
+            let data = [];
             try {
                 switch (tipoSessao) {
                     case "Livros":
-                        setDadosBd(await getAllLivros());
+                        data = await getAllLivros();
                         break;
                     case "Usuários":
-                        setDadosBd(await getAllUsuarios());
+                        data = await getAllUsuarios();
                         break;
                     case "Empréstimos":
-                        setDadosBd(await getAllEmprestimos());
+                        data = await getAllEmprestimos();
                         break;
                     default:
                         setDadosBd([]);
                 }
+                setDadosBd(data);
             } catch (e) {
                 console.error(`A requisição deu erro: ${e}`);
             }
@@ -36,9 +35,18 @@ export default function ListaLivros({tipoSessao}) {
 
     if (tipoSessao === "Livros") {
         return (
-            <div className='listaLivrosContainer'>
+            <div className='listaCardsContainer'>
                 {dadosBd.map((livro) => (
-                    <CardLivro id={livro.id} titulo={livro.titulo} autor={livro.autor} isbn={livro.isbn} anoDePublicacao={livro.anoDePublicacao} disponivel={livro.disponivel} />
+                    <CardLivro key={livro.id} id={livro.id} titulo={livro.titulo} autor={livro.autor} isbn={livro.isbn} anoDePublicacao={livro.anoDePublicacao} disponivel={livro.disponivel} />
+                ))}
+            </div>
+          )
+    }
+    if (tipoSessao === "Usuários") {
+        return (
+            <div className='listaCardsContainer'>
+                {dadosBd.map((usuario) => (
+                    <Cardusuario nome={usuario.nome} email={usuario.email} />
                 ))}
             </div>
           )

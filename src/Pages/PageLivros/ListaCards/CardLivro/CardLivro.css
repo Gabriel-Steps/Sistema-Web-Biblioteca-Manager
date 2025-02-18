@@ -1,4 +1,4 @@
-.cardLivroListaContainer{
+.cardListaContainer{
     background-color: #FFFFFF;
     border: 5px solid #3498DB;
     padding: 20px;
@@ -61,11 +61,5 @@
 
     button[status="indisponivel"]:hover{
         cursor: not-allowed;
-    }
-}
-
-.cardLivroListaContainer[tipo="Usuario"]{
-    button{
-        display: none;
     }
 }
