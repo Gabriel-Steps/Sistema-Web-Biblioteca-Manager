@@ -35,3 +35,13 @@ export const createLivro = async (livro) => {
         return "Erro ao criar o livro";
     }
 }
+
+export const getLivroById = async (id) => {
+    try {
+        const response = await api.get(`/livros/${id}`);
+        return response.data;
+    } catch (e) {
+        console.error("Erro ao buscar dados:", e);
+        throw e;
+    }
+}

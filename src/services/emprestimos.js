@@ -9,3 +9,26 @@ export const getAllEmprestimos = async () => {
         throw e;
     }
 }
+
+export const createEmprestimo = async (emprestimo) => {
+    try {
+        const response = await api.post(`emprestimos/create`, emprestimo);
+        if (!response.data) {
+            throw new Error("Erro ao criar o empréstimo");
+        }
+        return "empréstimo criado com sucesso!";
+    } catch (e) {
+        console.error("Erro:", e);
+        return "Erro ao criar o empréstimo";
+    }
+}
+
+export const deleteEmprestimo = async (id) => {
+    try {
+        await api.delete(`emprestimos/delete/${id}`);
+        return "Devoluçaõ realizada com sucesso!";
+    } catch (e) {
+        console.error(`Erro: ${e}`);
+        return "Erro ao deletar empréstimo";
+    }
+}

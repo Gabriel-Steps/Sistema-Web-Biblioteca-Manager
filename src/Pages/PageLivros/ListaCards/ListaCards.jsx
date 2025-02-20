@@ -5,9 +5,17 @@ import { getAllUsuarios } from '../../../services/usuarios';
 import { getAllEmprestimos } from '../../../services/emprestimos';
 import CardLivro from './CardLivro/CardLivro';
 import Cardusuario from './CardUsuario/Cardusuario';
+import CardEmprestimo from './CardEmprestimos/CardEmprestimo';
 
 export default function ListaCards({tipoSessao}) {
     const [dadosBd, setDadosBd] = useState([]);
+    const verificarAtraso = (emprestimo) => {
+            var dateNow = Date.now();
+            if (emprestimo.dataDaDevolucao < dateNow) {
+                return "Atraso";
+            }
+            return "Pendente";
+        }
     useEffect(() => {
         const fetchData = async () => {
             let data = [];
@@ -50,5 +58,15 @@ export default function ListaCards({tipoSessao}) {
                 ))}
             </div>
           )
+    }
+
+    if (tipoSessao === "Empréstimos") {
+        return (
+            <div className='listaCardsContainer'>
+                {dadosBd.map((emprestimo) => (
+                    <CardEmprestimo id={emprestimo.id} status={verificarAtraso(emprestimo)} idUsuario={emprestimo.idUsuario} idLivro={emprestimo.idLivro} dataDoEmprestimo={emprestimo.dataDoEmprestimo} dataDaDevolucao={emprestimo.dataDaDevolucao} />
+                ))}
+            </div>
+        );
     }
 }

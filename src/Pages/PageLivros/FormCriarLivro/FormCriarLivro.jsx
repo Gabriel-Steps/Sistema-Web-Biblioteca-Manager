@@ -17,7 +17,6 @@ export default function FormCriarLivro() {
         isbn,
         anoDeLancamento: parseInt(anoDeLancamento, 10) || 0 
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const mensagem = await createLivro(livro);
@@ -26,7 +25,7 @@ export default function FormCriarLivro() {
     };
 
     return (
-        <div className='formCriarLivroContainer'>
+        <div className='formCriarContainer'>
             <button onClick={() => setEstadoFormulario(estadoFormulario === "hide" ? "flex" : "hide")}>Adicionar Livro</button>
             <div status={estadoFormulario} className="foraFormContainer">
                 <form method="post" onSubmit={handleSubmit}>
