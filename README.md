@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Biblioteca Manager 📚
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Biblioteca Manager** is a Full Stack web system developed to manage books, users, and loans in a library. The project was built using **React.js** on the frontend and **ASP.NET Core** on the backend, with **SQL Server** as the database.
 
-## Available Scripts
+## 🚀 Technologies Used
 
-In the project directory, you can run:
+### Backend:
+- C# | .NET 8 | ASP.NET Core
+- Entity Framework Core
+- REST API
+- SQL Server
+- FluentValidation
 
-### `npm start`
+### Frontend:
+- React.js
+- React Router
+- Axios
+- CSS3
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📌 Features
+- 📖 **Book Management**: Add, view, and delete books.
+- 👤 **User Management**: Register and manage library users.
+- 🔄 **Loans**: Register and track book loans, with availability control.
+- ⏳ **Return Status**: Automatic identification of overdue books.
+- 📱 **Responsiveness**: Interface optimized for various devices.
+- 🔄 **Dynamic Navigation**: Users can switch between books, users, and loans without reloading the page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⚙️ How to Run the Project
 
-### `npm test`
+### 1️⃣ Backend - API (ASP.NET Core)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the project, you'll need to clone my project [API-Biblioteca-Manager](https://github.com/Gabriel-Steps/API-Biblioteca-Manager.git)
 
-### `npm run build`
+```bash
+# Clone the repository
+git clone https://github.com/Gabriel-Steps/API-Biblioteca-Manager.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Go to the backend folder
+cd API-Biblioteca-Manager
+cd SistemaBiblioteca.API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Configure the SQL Server connection in appsettings.json
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Run the database migrations
+dotnet ef database update
 
-### `npm run eject`
+# Start the server
+dotnet run
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 2️⃣ Frontend - Web Application (React.js)
+```bash
+# Clone the repository
+git clone https://github.com/Gabriel-Steps/Sistema-Web-Biblioteca-Manager.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Go to the frontend folder
+cd Sistema-Web-Biblioteca-Manager
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Install the dependencies
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Start the project
+npm start
+```
 
-## Learn More
+# 🎥 Demo
+Check out the project presentation video on YouTube: [Insert video link here]
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 📌 Contact
+#### If you have any questions or suggestions, feel free to reach out: 📩 Email: gabrielpassosfrancisco@gmail.com
+#### 🔗 LinkedIn: [Linkedin](https://www.linkedin.com/in/gabrielpassosfrancisco/?locale=en_US)
+#### 🐙 GitHub: [GitHub](https://github.com/Gabriel-Steps)
